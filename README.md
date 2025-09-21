@@ -1,2 +1,2 @@
 # jvedder.github.io
-Public website
+My personal website.
