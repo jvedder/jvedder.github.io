@@ -15,34 +15,35 @@ b, strong {
 	font-weight: 700;
 }
 
-.content {
+header, main, footer {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 700px;
 	padding-left: 2em;
 	padding-right: 2em;
+	margin-bottom: 2em;
 }
 
-.logo-link {
+.header-logo {
 	display: inline-block;
 	padding-right: 1em;
 	vertical-align: middle;
 	width: auto;
 }
 
-.logo-link img {
+.header-logo img {
 	display: inline-block;
 	max-height: 80px;
 	width: auto;
 }
 
-.title {
+.header-block {
 	display: inline-block;
 	max-width: 100%;
 	vertical-align: middle;
 }
 
-.site-title {
+.header-title {
 	clear: none;
 	font-size: 24px;
 	font-weight: 800;
@@ -51,17 +52,4 @@ b, strong {
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
-}
-
-.site-title a {
-	color: #222;
-	opacity: 1;
-	text-decoration: none;
-	-webkit-transition: opacity 0.2s;
-	transition: opacity 0.2s;
-}
-
-.site-title a:hover,
-.site-title a:focus {
-	opacity: 0.6;
 }
