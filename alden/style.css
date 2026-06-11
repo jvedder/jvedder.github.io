@@ -1,0 +1,364 @@
+/* ============================================================
+   aldenvedder.com — Static Site Stylesheet
+   Clean, maintainable CSS. Edit freely.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. RESET & BASE
+   ------------------------------------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #2b5fa8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------
+   2. LAYOUT — PAGE WRAPPER
+   ------------------------------------------------------------ */
+
+.site-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* ------------------------------------------------------------
+   3. HEADER & NAVIGATION
+   ------------------------------------------------------------ */
+
+.site-header {
+  border-bottom: 2px solid #1a1a1a;
+  padding: 1.25rem 0;
+  margin-bottom: 2.5rem;
+}
+
+.site-header .site-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+}
+
+.site-title a {
+  color: inherit;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+  color: #2b5fa8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1a1a1a;
+}
+
+nav a:hover {
+  color: #2b5fa8;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #2b5fa8;
+  border-bottom: 2px solid #2b5fa8;
+}
+
+
+/* ------------------------------------------------------------
+   4. MAIN CONTENT AREA
+   ------------------------------------------------------------ */
+
+main {
+  padding-bottom: 3rem;
+}
+
+
+/* ------------------------------------------------------------
+   5. ONE-COLUMN LAYOUT
+   ------------------------------------------------------------ */
+
+.layout-one-col {
+  max-width: 720px;
+}
+
+
+/* ------------------------------------------------------------
+   6. TWO-COLUMN LAYOUT
+   ------------------------------------------------------------ */
+
+.layout-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Stack to one column on narrow screens */
+@media (max-width: 768px) {
+  .layout-two-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   7. TYPOGRAPHY
+   ------------------------------------------------------------ */
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d0d0d0;
+  margin: 2rem 0;
+}
+
+
+/* ------------------------------------------------------------
+   8. HERO / INTRO SECTION (home page)
+   ------------------------------------------------------------ */
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero img {
+    margin: 0 auto;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   9. BUTTONS / CALLS TO ACTION
+   ------------------------------------------------------------ */
+
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.3rem;
+  background: #2b5fa8;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  margin-top: 0.75rem;
+}
+
+.btn:hover {
+  background: #1d4580;
+  text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------
+   10. PROJECT CARDS (projects listing page)
+   ------------------------------------------------------------ */
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card {
+  border-top: 1px solid #d0d0d0;
+  padding: 1.75rem 0;
+}
+
+.project-card:last-child {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.project-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-card h2 a {
+  color: #1a1a1a;
+}
+
+.project-card h2 a:hover {
+  color: #2b5fa8;
+  text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------
+   11. PROJECT DETAIL — IMAGES
+   ------------------------------------------------------------ */
+
+.project-image {
+  margin: 1.5rem 0;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.project-image figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Gallery: side-by-side images that stack on mobile */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ------------------------------------------------------------
+   12. POST NAVIGATION (prev / next)
+   ------------------------------------------------------------ */
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid #d0d0d0;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+
+.post-nav a {
+  color: #2b5fa8;
+}
+
+
+/* ------------------------------------------------------------
+   13. FOOTER
+   ------------------------------------------------------------ */
+
+.site-footer {
+  border-top: 2px solid #1a1a1a;
+  padding: 1.25rem 0;
+  margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: #555;
+  text-align: center;
+}
