@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://johnvedder.com/sitemap.xml
