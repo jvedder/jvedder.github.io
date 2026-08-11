@@ -82,6 +82,7 @@ li {
 }
 
 img {
+	box-sizing: border-box;
 	height: auto;
 	max-width: 100%;
 }
@@ -94,8 +95,28 @@ main img {
 	width: 100%;
 }
 
+/* Two photos side by side, stacking to one column on narrow screens. */
+.photo-pair {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 0 2.5em;
+}
+
+.photo-pair img {
+	margin: 0;
+}
+
+@media (max-width: 600px) {
+	.photo-pair {
+		grid-template-columns: 1fr;
+		gap: 1.5em;
+	}
+}
+
 /* Keep a lead-in sentence tight against the image it introduces. */
-main p:has(+ img) {
+main p:has(+ img),
+main p:has(+ .photo-pair) {
 	margin-bottom: 0.5em;
 }
 
