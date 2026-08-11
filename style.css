@@ -54,3 +54,58 @@ header, main, footer {
 	padding: 0;
 	text-transform: uppercase;
 }
+
+.site-nav {
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	margin: 0 0 0.75em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1.25;
+	margin: 2em 0 0.75em;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+ul {
+	margin: 0 0 1.5em;
+	padding-left: 1.25em;
+}
+
+li {
+	margin-bottom: 0.25em;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+/* Figures span the full text column so every image lines up edge to edge. */
+main img {
+	border: 1px solid #e5e5e5;
+	display: block;
+	margin: 0 0 2.5em;
+	width: 100%;
+}
+
+/* Keep a lead-in sentence tight against the image it introduces. */
+main p:has(+ img) {
+	margin-bottom: 0.5em;
+}
+
+footer {
+	border-top: 1px solid #e5e5e5;
+	color: #555;
+	font-size: 14px;
+	padding-top: 1.5em;
+}
+
+footer p {
+	margin: 0;
+}
